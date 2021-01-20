@@ -1,0 +1,84 @@
+/* Block Alignments */
+
+/**
+ * .alignleft
+ */
+.alignleft {
+
+}
+
+// Targeting the .entry-content class is necessary to ensure these styles
+// only apply when the block isn't nested.
+.entry-content > .alignleft {
+	
+}
+
+@include media(mobile) {
+
+	.alignleft {
+
+	}
+
+	.entry-content > .alignleft {
+		
+	}
+}
+
+/**
+ * .aligncenter
+ */
+.aligncenter {
+	
+}
+
+/**
+ * .alignright
+ */
+.alignright {
+
+}
+
+// Targeting the .entry-content class is necessary to ensure these styles
+// only apply when the block isn't nested.
+.entry-content > .alignright {
+	
+}
+
+@include media(mobile) {
+
+	.alignright {
+
+	}
+
+	.entry-content > .alignright {
+		
+	}
+}
+
+// Make sure siblings of floated elements are top-aligned when nested
+.entry-content > .alignleft + *,
+.entry-content > .alignright + * {
+	margin-top: 0;
+}
+
+/**
+ * .alignwide
+ */
+.alignwide {
+	
+}
+
+.alignwide [class*="inner-container"] > .alignwide {
+	
+}
+
+/**
+ * .alignfull
+ */
+.alignfull {
+	clear: both;
+}
+
+.alignfull [class*="inner-container"] > .alignwide {
+	
+}
